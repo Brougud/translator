@@ -3,7 +3,6 @@ package translator
 import (
 	"fmt"
 	"os"
-	"time"
 
 	"github.com/Brougud/translator/language"
 
