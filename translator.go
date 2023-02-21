@@ -5,7 +5,7 @@ import (
 	"os"
 	"time"
 
-	"translator/language"
+	"github.com/Brougud/translator/language"
 
 	lng "golang.org/x/text/language"
 )
