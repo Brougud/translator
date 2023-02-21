@@ -1,4 +1,4 @@
-module translator
+module github.com/Brougud/translator
 
 go 1.19
 
