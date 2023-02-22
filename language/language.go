@@ -37,13 +37,23 @@ func (l Language) WithTranslations(tra string) Language {
 	return l
 }
 
+// Name ...
+func (l Language) Name() string {
+	return l.name
+}
+
+// Icon ...
+func (l Language) Icon() string {
+	return l.icon
+}
+
 // Translate will return the value of the given key unformatted
 // if the given key is not found then it will simply return the key
 func (l Language) Translate(key string) string {
 	res := gjson.Get(l.translations, key)
-  if res.String() == "" {
-    return key
-  }
+	if res.String() == "" {
+		return key
+	}
 	return res.String()
 }
 
@@ -51,8 +61,8 @@ func (l Language) Translate(key string) string {
 // if the given key is not found then it will simply return the key
 func (l Language) Translatef(key string, args ...any) string {
 	res := gjson.Get(l.translations, key)
-  if res.String() == "" {
-    return key
-  }
+	if res.String() == "" {
+		return key
+	}
 	return fmt.Sprintf(res.String(), args...)
 }
